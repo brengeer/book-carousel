@@ -9,7 +9,6 @@
 <body>
 
   <div class="bookshelf">
-    <img src="bookcase.png" alt="Bookshelf" class="shelf-bg" />
     <div class="book-row">
       <img src="https://covers.openlibrary.org/b/id/10523395-L.jpg" alt="Book 1"
         onclick="showBook('Le Petit Prince', 'A poetic tale about a little prince and his travels.', this.src)" />
@@ -18,6 +17,7 @@
       <img src="https://covers.openlibrary.org/b/id/11608632-L.jpg" alt="Book 3"
         onclick="showBook('Pride and Prejudice', 'A romantic classic by Jane Austen.', this.src)" />
     </div>
+    <img src="bookcase.png" alt="Bookshelf" class="shelf-bg" />
   </div>
 
   <div class="modal" id="modal">
@@ -41,6 +41,6 @@
       document.getElementById("modal").style.display = "none";
     }
   </script>
-
 </body>
 </html>
+
