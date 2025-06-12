@@ -7,17 +7,27 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- ✅ Bookshelf container -->
   <div class="bookshelf">
+    
+    <!-- ✅ The bookshelf image background -->
     <img src="bookcase.png" alt="Bookshelf" class="shelf-bg" />
+    
+    <!-- ✅ Carousel layer (must be inside the .bookshelf to align properly) -->
     <div class="carousel">
       <div class="carousel-track">
-        <img src="https://covers.openlibrary.org/b/id/10523395-L.jpg" alt="Book 1" onclick="showBook('Le Petit Prince', 'A poetic tale about a little prince and his travels.', this.src)" />
-        <img src="https://covers.openlibrary.org/b/id/11153238-L.jpg" alt="Book 2" onclick="showBook('1984', 'A dystopian novel by George Orwell about surveillance and truth.', this.src)" />
-        <img src="https://covers.openlibrary.org/b/id/11608632-L.jpg" alt="Book 3" onclick="showBook('Pride and Prejudice', 'A romantic classic by Jane Austen.', this.src)" />
+        <img src="https://covers.openlibrary.org/b/id/10523395-L.jpg" alt="Book 1"
+          onclick="showBook('Le Petit Prince', 'A poetic tale about a little prince and his travels.', this.src)" />
+        <img src="https://covers.openlibrary.org/b/id/11153238-L.jpg" alt="Book 2"
+          onclick="showBook('1984', 'A dystopian novel by George Orwell.', this.src)" />
+        <img src="https://covers.openlibrary.org/b/id/11608632-L.jpg" alt="Book 3"
+          onclick="showBook('Pride and Prejudice', 'A romantic classic by Jane Austen.', this.src)" />
       </div>
     </div>
   </div>
 
+  <!-- ✅ Lightbox Modal -->
   <div class="modal" id="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
@@ -27,6 +37,7 @@
     </div>
   </div>
 
+  <!-- ✅ Lightbox JS -->
   <script>
     function showBook(title, desc, imgSrc) {
       document.getElementById("modal-img").src = imgSrc;
