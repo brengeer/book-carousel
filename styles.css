@@ -14,18 +14,15 @@ body {
 .shelf-bg {
   width: 100%;
   display: block;
+  position: relative;
   z-index: 1;
 }
 
 .carousel {
   position: absolute;
-  top: 62%;
-  left: 5%;
-  width: 90%;
-  overflow: hidden;
-  height: 140px;
-  z-index: 2
+  z-index: 2;
 }
+
 
 .carousel-track {
   display: flex;
