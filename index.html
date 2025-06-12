@@ -3,38 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bookcase Lightbox</title>
+  <title>Book Carousel</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="bookshelf">
     <img src="bookcase.png" alt="Bookshelf" class="shelf-bg" />
-
     <div class="book-row">
-      <img src="https://covers.openlibrary.org/b/id/10523395-L.jpg" alt="Le Petit Prince"
-           class="book-cover" onclick="openLightbox('Le Petit Prince', 'A poetic tale about a little prince and his travels.', this.src)">
-      <img src="https://covers.openlibrary.org/b/id/11153238-L.jpg" alt="1984"
-           class="book-cover" onclick="openLightbox('1984', 'A dystopian novel by George Orwell about surveillance and truth.', this.src)">
-      <img src="https://covers.openlibrary.org/b/id/11608632-L.jpg" alt="Pride and Prejudice"
-           class="book-cover" onclick="openLightbox('Pride and Prejudice', 'A romantic classic by Jane Austen.', this.src)">
+      <img src="https://covers.openlibrary.org/b/id/10523395-L.jpg" alt="Book 1"
+           onclick="showLightbox('Le Petit Prince', 'A poetic tale about a little prince and his travels.', this.src)" />
+      <img src="https://covers.openlibrary.org/b/id/11153238-L.jpg" alt="Book 2"
+           onclick="showLightbox('1984', 'A dystopian novel by George Orwell.', this.src)" />
+      <img src="https://covers.openlibrary.org/b/id/11608632-L.jpg" alt="Book 3"
+           onclick="showLightbox('Pride and Prejudice', 'A romantic classic by Jane Austen.', this.src)" />
     </div>
   </div>
 
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <div class="lightbox-content" onclick="event.stopPropagation()">
-      <span class="close" onclick="closeLightbox()">&times;</span>
-      <img id="lightbox-img" src="" alt="Book Cover" />
+  <div id="lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <span class="close" onclick="closeLightbox()">×</span>
+      <img id="lightbox-img" src="" alt="Book" />
       <h2 id="lightbox-title"></h2>
       <p id="lightbox-desc"></p>
     </div>
   </div>
 
   <script>
-    function openLightbox(title, desc, src) {
+    function showLightbox(title, desc, imgSrc) {
+      document.getElementById("lightbox-img").src = imgSrc;
+      document.getElementById("lightbox-title").innerText = title;
+      document.getElementById("lightbox-desc").innerText = desc;
       document.getElementById("lightbox").style.display = "flex";
-      document.getElementById("lightbox-img").src = src;
-      document.getElementById("lightbox-title").textContent = title;
-      document.getElementById("lightbox-desc").textContent = desc;
     }
 
     function closeLightbox() {
