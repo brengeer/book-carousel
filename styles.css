@@ -32,7 +32,7 @@ body {
 }
 
 .carousel-track img {
-  height: 150px;
+  height: 100px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
