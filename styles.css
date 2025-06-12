@@ -24,7 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: -120px; /* This pulls the books down over the shelf */
+  margin-top: -300px; /* This pulls the books down over the shelf */
   z-index: 2;
   position: relative;
 }
