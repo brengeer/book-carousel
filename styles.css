@@ -18,12 +18,13 @@ body {
   left: 0;
   width: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
 
 .carousel {
   position: absolute;
-  top: 65%; /* Change this until books sit exactly on shelf */
+  top: 40%; /* Change this until books sit exactly on shelf */
   left: 0;
   width: 100%;
   height: 200px;
@@ -31,8 +32,8 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  background: rgba(255, 0, 0, 0.3); /* semi-transparent red */
 }
-
 
 .carousel-track {
   display: flex;
@@ -43,6 +44,7 @@ body {
 .carousel-track img {
   height: 160px; /* Bigger books */
   transition: transform 0.3s ease;
+  border: 2px solid blue;
 }
 
 .carousel-track img:hover {
