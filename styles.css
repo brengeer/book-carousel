@@ -4,26 +4,35 @@ body {
   background: #f4f4f4;
 }
 
-.bookshelf {
-  background: url('bookcase.png') no-repeat center top;
-  background-size: cover;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.bookshelf-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.books img {
+.shelf-bg {
+  width: 100%;
+  display: block;
+}
+
+.book {
+  position: absolute;
+  bottom: 18%; /* Adjust to align book with shelf visually */
+  transform: translateX(-50%);
+}
+
+.book img {
   height: 160px;
-  margin: 0 15px;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
-.books img:hover {
+.book img:hover {
   transform: scale(1.05);
 }
 
+/* Lightbox Styles */
 .lightbox {
   display: none;
   position: fixed;
@@ -42,6 +51,7 @@ body {
 .lightbox-content {
   text-align: center;
   max-width: 600px;
+  position: relative;
 }
 
 .lightbox-content img {
@@ -49,10 +59,20 @@ body {
   margin-bottom: 1rem;
 }
 
+.lightbox-content h2 {
+  margin: 0.5rem 0;
+}
+
+.lightbox-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
 .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: -10px;
+  right: -10px;
   font-size: 36px;
   font-weight: bold;
   cursor: pointer;
