@@ -9,7 +9,9 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 2rem auto;
+  height: 500px; /* Add this line */
 }
+
 
 .shelf-bg {
   width: 100%;
