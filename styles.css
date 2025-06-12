@@ -14,6 +14,7 @@ body {
 .shelf-bg {
   width: 100%;
   display: block;
+  z-index: 1;
 }
 
 .carousel {
@@ -23,6 +24,7 @@ body {
   width: 90%;
   overflow: hidden;
   height: 140px;
+  z-index: 2
 }
 
 .carousel-track {
