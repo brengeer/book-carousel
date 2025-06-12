@@ -35,11 +35,11 @@ body {
 }
 
 /* Shelf image behind books */
-.shelf-bg {
+.shelf {
+  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   z-index: 1;
 }
 
